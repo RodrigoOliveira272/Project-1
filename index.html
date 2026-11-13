@@ -1,11 +1,11 @@
-
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biblioteca do Bairro</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="src.js" defer></script>
 </head>
 
 <body>
@@ -50,6 +50,32 @@
                 <h3>Época de exames</h3>
                 <p>Horário alargado (a confirmar).</p>
             </div>
+
+            <div class="card">
+                <h3>Verificar se está aberta</h3>
+                <label for="dia">Dia da semana</label>
+                <select id="dia">
+                    <option value="segunda-feira">Segunda-feira</option>
+                    <option value="terça-feira">Terça-feira</option>
+                    <option value="quarta-feira">Quarta-feira</option>
+                    <option value="quinta-feira">Quinta-feira</option>
+                    <option value="sexta-feira">Sexta-feira</option>
+                    <option value="sábado">Sábado</option>
+                    <option value="domingo">Domingo</option>
+                </select>
+                <label for="hora">Hora</label>
+                <input id="hora" type="number" min="0" max="23" value="11">
+                <button id="verificar-horario" type="button">Verificar</button>
+                <p id="resultado-horario" aria-live="polite"></p>
+            </div>
+
+            <div class="card">
+                <h3>Calcular multa por atraso</h3>
+                <label for="dias">Dias desde o empréstimo</label>
+                <input id="dias" type="number" min="0" step="1" value="15">
+                <button id="calcular-multa" type="button">Calcular</button>
+                <p id="resultado-multa" aria-live="polite"></p>
+            </div>
         </section>
 
         <section class="container" id="sobre">
@@ -67,8 +93,8 @@
             <h2>Dicas rápidas</h2>
 
             <div class="card">
-                <p>Use &lt;p&gt; para parágrafos.</p>
-                <p>Escreva <code>&lt;p&gt;</code> no editor.</p>
+                <p>Use p; para parágrafos.</p>
+                <p>Escreva p no editor.</p>
                 <p>H<sub>2</sub>O e 2<sup>10</sup></p>
             </div>
         </section>
@@ -87,6 +113,5 @@
         <p>© 2026 Biblioteca</p>
         <p>Entrada livre.</p>
     </footer>
-
 </body>
 </html>
